@@ -43,6 +43,7 @@ tokens = [
     'INICIO',
     'FIN',
     'OPEN_TAG_WITH_ECHO',
+    'SALTO_DE_LINEA',
     'PUNTOYCOMA',
     'PUNTO',
     'COMA',
@@ -98,6 +99,7 @@ tokens = [
  ] + list(reserved.values())
 
 t_PUNTOYCOMA = r';'
+t_SALTO_DE_LINEA = r'\\n'
 t_PUNTO = r'\.'
 t_COMA = r','
 t_COMDOB = r'\"'
@@ -313,7 +315,7 @@ def getTokens(lex):
 
 
 linea = " "
-codigo = open("source.vb")
+codigo = open("source.txt")
 for linea in codigo:
     validador.input(linea)
     getTokens(validador)
