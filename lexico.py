@@ -1,6 +1,7 @@
 import ply.lex as lex
 
 reserved = {
+    #Viviana
     'if': 'IF',
     'else': 'ELSE',
     'do': 'DO',
@@ -13,6 +14,8 @@ reserved = {
     'break': 'BREAK',
     'continue': 'CONTINUE',
     'default': 'DEFAULT',
+    #Fin Viviana
+    #Cindy
     'as': 'AS',
     'rsort': 'RSORT',
     'count': 'COUNT',
@@ -25,6 +28,8 @@ reserved = {
     'return': 'RETURN',
     'class': 'CLASS',
     'new': 'NEW',
+    #Fin Cindy
+    #Johanna
     'extends': 'EXTENDS',
     'int': 'INTEGER',
     'string': 'STRING',
@@ -37,9 +42,10 @@ reserved = {
     'current': 'CURRENT',
     'list': 'LIST',
     'empty': 'EMPTY'
-
+#Fin Johanna
 }
 tokens = [
+    #Viviana
     'INICIO',
     'FIN',
     'OPEN_TAG_WITH_ECHO',
@@ -58,6 +64,8 @@ tokens = [
     'AMPERSAND',
     'IGUAL',
     'MAS',
+    #Fin Viviana
+    #Cindy
     'MENOS',
     'MULTIPLICA',
     'DIVIDE',
@@ -76,6 +84,8 @@ tokens = [
     'OPERLOGICO_OREXCLUSIVO',
     'OPERLOGICO_NOT',
     'OPERASIG_ARRAY',
+    #Fin Cindy
+    #Johanna
     'BOOLEANO',
     'MAYORQUE',
     'MENORQUE',
@@ -96,6 +106,7 @@ tokens = [
     'PRIVATE',
     'TEXTOSENCILLO',
     'ESPACIOENBLANCO'
+    #Fin Johanna
  ] + list(reserved.values())
 
 t_PUNTOYCOMA = r';'
@@ -197,13 +208,6 @@ def t_PROTECTED(t):
 def t_PRIVATE(t):
     r'private'
     return t
-
-#.
-#.
-#Cindy
-
-#Gabriela
-
 
 t_MAYORQUE=r'>'
 t_MENORQUE = r'<'
